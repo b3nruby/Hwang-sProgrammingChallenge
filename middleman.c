@@ -37,7 +37,7 @@ int main() {
     char read[1024];
     char tmpBuff[1024];
     char message[1024];
-    char message2[1024]
+    char message2[1024];
     char ip[16];
 
     while (run == 1) {
@@ -98,7 +98,7 @@ int main() {
                     NI_NUMERICHOST | NI_NUMERICSERV);
         printf("%s %s\n", address2_buffer, service2_buffer);
         printf("Creating socket...\n");
-        SOCKET socket_listen;
+        SOCKET socket_peer;
         socket_peer = socket(peer_address->ai_family,
                              peer_address->ai_socktype, peer_address->ai_protocol);
         if (!ISVALIDSOCKET(socket_peer)) {
