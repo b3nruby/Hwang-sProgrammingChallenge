@@ -9,6 +9,10 @@ int main(int args, char *argv[]) {
     }
 #endif
 
+    struct timeval timeout;
+    timeout.tv_sec = 0;
+    timeout.tv_usec = 100000;
+
     if (args < 3) {
         fprintf(stderr, "usage: tcp_client hostname port\n");
         return 1;

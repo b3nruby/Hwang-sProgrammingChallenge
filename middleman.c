@@ -86,6 +86,8 @@ int main() {
         return 1;
     }
     freeaddrinfo(bind_address);
+
+
     struct sockaddr_storage client_address;
     socklen_t client_len = sizeof(client_address);
 
@@ -136,6 +138,10 @@ int main() {
     }
 
     //function to send back to original sender
+
+    int bytes_sent = sendto(socket_listen,message2, strlen(message2),0, bind_address->ai_addr, bind_address->ai_addrlen);
+    printf("Sent %d bytes.\n", bytes_sent);
+    printf( "Message sent: &s\n", message2);
 
     CLOSESOCKET(socket_listen);
 
