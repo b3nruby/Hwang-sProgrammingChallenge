@@ -37,6 +37,7 @@ int main() {
     char read[1024];
     char tmpBuff[1024];
     char message[1024];
+    char message2[1024]
     char ip[16];
 
     while (run == 1) {
@@ -76,8 +77,7 @@ int main() {
         run += 1;
     }
 
-    // start second function to send to receiver with port 8081
-
+    // start second remote address socket to send to receiver over port 8081
     do {
         printf("Configuring remote address to second computer...\n");
         struct addrinfo hints2;
@@ -98,7 +98,7 @@ int main() {
                     NI_NUMERICHOST | NI_NUMERICSERV);
         printf("%s %s\n", address2_buffer, service2_buffer);
         printf("Creating socket...\n");
-        SOCKET socket_peer;
+        SOCKET socket_listen;
         socket_peer = socket(peer_address->ai_family,
                              peer_address->ai_socktype, peer_address->ai_protocol);
         if (!ISVALIDSOCKET(socket_peer)) {
@@ -106,6 +106,19 @@ int main() {
             return 1;
 
         }
+        //foward message to third computer
+        int tBytes = sendto(socket_peer,message, strlen(message), 0,
+                            (struct sockaddr *) &peer_address, peer_len);
+        printf("Bytes &n sent\n", tBytes);
+        printf("Message sent: &s\n", message);
+
+        //Listen for message from the third computer
+        int bytes_received = recvfrom(socket_peer,
+                                      read, 1024,
+                                      0,
+                                      (struct sockaddr *) &client_address, &client_len);
+        message2 = read;
+
         CLOSESOCKET(socket_peer);
         ret = 2;
 
