@@ -1,4 +1,21 @@
 #include "winHead.h"
+void dropMessage(char* ipNum,char*mes) {
+    char userInput[10];
+    while (1) {
+        printf("Do you want to drop the message? (yes/no): ");
+        scanf("%s", userInput);
+
+        if (strcmp(userInput, "yes") == 0) {
+            printf("Message dropped. Exiting function.\n");
+            return; // Exit the function
+        } else if (strcmp(userInput, "no") == 0) {
+            printf("Continuing with processing...\n");
+            break; // Continue with the processing logic
+        } else {
+            printf("Invalid input. Please enter 'yes' or 'no'.\n");
+        }
+    }
+}
 
 int main() {
     WSADATA d;
@@ -37,10 +54,10 @@ int main() {
     char read[1024];
     char tmpBuff[1024];
     char message[1024];
-    char message2[1024]
+    char *message2;
     char ip[16];
 
-    while (run == 1) {
+    while (message != "") {
         int bytes_received = recvfrom(socket_listen,
                                       read, 1024,
                                       0,
@@ -74,58 +91,71 @@ int main() {
                     service1_buffer, sizeof(service1_buffer),
                     NI_NUMERICHOST | NI_NUMERICSERV);
         printf("%s %s\n", address1_buffer, service1_buffer);
-        run += 1;
     }
 
+    // check to drop
+        char userInput[10];
+        while (1) {
+            printf("Do you want to drop the message? (yes/no): ");
+            scanf("%s", userInput);
+
+            if (strcmp(userInput, "yes") == 0) {
+                printf("Message dropped. Exiting function.\n");
+                return 0; // Exit the function
+            } else if (strcmp(userInput, "no") == 0) {
+                printf("Continuing with processing...\n");
+                break;
+            } else {
+                printf("Invalid input. Please enter 'yes' or 'no'.\n");
+            }
+        }
+
     // start second remote address socket to send to receiver over port 8081
-    do {
-        printf("Configuring remote address to second computer...\n");
-        struct addrinfo hints2;
-        memset(&hints2, 0, sizeof(hints2));
-        hints2.ai_socktype = SOCK_DGRAM;
-        struct addrinfo *peer_address;
-        // get IP from message
-        if (getaddrinfo((ip), "8081", &hints2, &peer_address)) {
-            fprintf(stderr, "getaddrinfo() failed. (%d)\n", GETSOCKETERRNO());
-            return 1;
-        }
-        printf("Remote address is: ");
-        char address2_buffer[100];
-        char service2_buffer[100];
-        getnameinfo(peer_address->ai_addr, peer_address->ai_addrlen,
-                    address2_buffer, sizeof(address2_buffer),
-                    service2_buffer, sizeof(service2_buffer),
-                    NI_NUMERICHOST | NI_NUMERICSERV);
-        printf("%s %s\n", address2_buffer, service2_buffer);
-        printf("Creating socket...\n");
-        SOCKET socket_listen;
-        socket_peer = socket(peer_address->ai_family,
-                             peer_address->ai_socktype, peer_address->ai_protocol);
-        if (!ISVALIDSOCKET(socket_peer)) {
-            fprintf(stderr, "socket() failed. (%d)\n", GETSOCKETERRNO());
-            return 1;
+                printf("Configuring remote address to second computer...\n");
+                struct addrinfo hints2;
+                memset(&hints2, 0, sizeof(hints2));
+                hints2.ai_socktype = SOCK_DGRAM;
+                struct addrinfo *peer_address;
+                // get IP from message
+                if (getaddrinfo((ip), "8081", &hints2, &peer_address)) {
+                    fprintf(stderr, "getaddrinfo() failed. (%d)\n", GETSOCKETERRNO());
+                    return 1;
+                }
+                printf("Remote address is: ");
+                char address2_buffer[100];
+                char service2_buffer[100];
+                getnameinfo(peer_address->ai_addr, peer_address->ai_addrlen,
+                            address2_buffer, sizeof(address2_buffer),
+                            service2_buffer, sizeof(service2_buffer),
+                            NI_NUMERICHOST | NI_NUMERICSERV);
+                printf("%s %s\n", address2_buffer, service2_buffer);
+                printf("Creating socket...\n");
+                SOCKET socket_peer;
+                socket_peer = socket(peer_address->ai_family,
+                                     peer_address->ai_socktype, peer_address->ai_protocol);
+                if (!ISVALIDSOCKET(socket_peer)) {
+                    fprintf(stderr, "socket() failed. (%d)\n", GETSOCKETERRNO());
+                    return 1;
 
-        }
-        //foward message to third computer
-        int tBytes = sendto(socket_peer,message, strlen(message), 0,
-                            (struct sockaddr *) &peer_address, peer_len);
-        printf("Bytes &n sent\n", tBytes);
-        printf("Message sent: &s\n", message);
+                }
+                //forward message to third computer
+                int tBytes = sendto(socket_peer,message, strlen(message), 0,peer_address->ai_addr, peer_address->ai_addrlen);
+                printf("Bytes &n sent\n", tBytes);
+                printf("Message sent to computer 3: &s\n", message);
 
-        //Listen for message from the third computer
-        int bytes_received = recvfrom(socket_peer,
-                                      read, 1024,
-                                      0,
-                                      (struct sockaddr *) &client_address, &client_len);
-        message2 = read;
-
-        CLOSESOCKET(socket_peer);
-
-        ret = 2;
-
-    } while (ret == 1);
+                //Listen for message from the third computer
+                int bytes_received = recvfrom(socket_peer,
+                                              read, 1024,
+                                              0,
+                                              (struct sockaddr *) &client_address, &client_len);
+                message2 = read;
+                printf("Message received from computer 3: %s\n ", message2);
+                CLOSESOCKET(socket_peer);
 
     //function to send back to original sender
+
+    //int bytes_sent = sendto(socket_peer,message2, strlen(message2),0, client_address->ai_addr, client_address->ai_addrlen);
+   // printf("Sent %d bytes.\n", bytes_sent);
 
     CLOSESOCKET(socket_listen);
 

@@ -1,0 +1,65 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ProgChallenge",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ProgChallenge::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ProgChallenge-Debug-304e09402a5f99ec35ab.json",
+					"name" : "ProgChallenge",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-733313defe72e19053de.json
+		"build" : "C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge/cmake-build-debug",
+		"source" : "C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge"
+========
+		"build" : "C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge/cmake-build-debug",
+		"source" : "C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge"
+>>>>>>>> e02eb357fab5b2fdedd289d6a2ce93f875f70b6d:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2c322a759f303b7f9161.json
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

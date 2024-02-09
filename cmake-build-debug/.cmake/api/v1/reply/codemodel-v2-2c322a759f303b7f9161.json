@@ -49,8 +49,13 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/kssms/CLionProjects/ProgChallenge/cmake-build-debug",
-		"source" : "C:/Users/kssms/CLionProjects/ProgChallenge"
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-733313defe72e19053de.json
+		"build" : "C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge/cmake-build-debug",
+		"source" : "C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge"
+========
+		"build" : "C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge/cmake-build-debug",
+		"source" : "C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge"
+>>>>>>>> e02eb357fab5b2fdedd289d6a2ce93f875f70b6d:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2c322a759f303b7f9161.json
 	},
 	"version" : 
 	{
