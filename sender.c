@@ -46,6 +46,7 @@ int main(int args, char *argv[]) {
     const char *message = " Hello how's it going.";
     printf("Sending: %s\n", message, argv[2]);
 
+    //start of loop do
     //concatnates message and argv[2] into new message
     const char *newMessage = strcat(argv[2],message);
     int bytes_sent = sendto(socket_peer,newMessage, strlen(newMessage),0,peer_address->ai_addr, peer_address->ai_addrlen);
@@ -63,7 +64,7 @@ int main(int args, char *argv[]) {
         bytes_check = bytes_received;
         Sleep(5);
     } while(bytes_check > 0);
-
+// check for received message if not return to line 44  while ( message not received) after 30 seconds.
 
 
     freeaddrinfo(peer_address);
