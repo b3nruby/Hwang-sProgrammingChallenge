@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/kssms/CLionProjects/ProgChallenge
+# Install script for directory: C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/kssms/CLionProjects/ProgChallenge/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
