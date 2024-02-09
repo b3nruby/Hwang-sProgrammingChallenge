@@ -1,0 +1,6 @@
+# ninja log v5
+14	2000	7291189800726674	CMakeFiles/ProgChallenge.dir/sender.c.obj	b8855dd607c85ef3
+54	463	7291189785368326	CMakeFiles/ProgChallenge.dir/returnSplit.c.obj	eafa932e40e4a4eb
+38	1997	7291189800726674	CMakeFiles/ProgChallenge.dir/receiver.c.obj	23dff36642347302
+7	249	7291193216790169	CMakeFiles/ProgChallenge.dir/main.cpp.obj	5ca63a990904756
+2	467	7291425360605447	build.ninja	db56a73f20fa92d5
