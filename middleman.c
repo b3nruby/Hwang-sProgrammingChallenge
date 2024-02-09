@@ -1,5 +1,4 @@
 #include "winHead.h"
-#include <stdbool.h>
 
 int main() {
     WSADATA d;
