@@ -120,6 +120,7 @@ int main() {
         message2 = read;
 
         CLOSESOCKET(socket_peer);
+
         ret = 2;
 
     } while (ret == 1);
