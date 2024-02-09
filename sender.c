@@ -69,7 +69,6 @@ int main(int args, char *argv[]) {
     } while(bytes_check > 0);
 
 
-
     freeaddrinfo(peer_address);
     CLOSESOCKET(socket_peer);
 
