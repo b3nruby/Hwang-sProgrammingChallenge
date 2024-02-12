@@ -136,14 +136,15 @@ int main() {
                 printf("Invalid input. Please enter 'yes' or 'no'.\n");
             }
         }
+        //function to send back to original sender
+        //int bytes_sent = sendto(socket_listen,message2, strlen(message2),0, bind_address->ai_addr, bind_address->ai_addrlen);
+        int bytes_sent = sendto(socket_listen, message2, strlen(message2), 0,
+                                (struct sockaddr *) &client_address, client_len);
+        printf("Sent %d bytes.\n", bytes_sent);
+        printf( "Message sent: %s\n", message2);
+
     }
 
-    //function to send back to original sender
-    //int bytes_sent = sendto(socket_listen,message2, strlen(message2),0, bind_address->ai_addr, bind_address->ai_addrlen);
-    int bytes_sent = sendto(socket_listen, message2, strlen(message2), 0,
-                            (struct sockaddr *) &client_address, client_len);
-    printf("Sent %d bytes.\n", bytes_sent);
-    printf( "Message sent: %s\n", message2);
     CLOSESOCKET(socket_listen);
     WSACleanup();
 
