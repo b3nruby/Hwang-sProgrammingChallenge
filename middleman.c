@@ -90,6 +90,7 @@ int main() {
         }
         freeaddrinfo(bind_address);
         //start of receiving from computer 1
+
             struct sockaddr_storage client_address;
             socklen_t client_len = sizeof(client_address);
                 int bytes_received = recvfrom(socket_listen,
