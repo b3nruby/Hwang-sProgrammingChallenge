@@ -48,6 +48,7 @@ int main() {
 
     printf("Waiting for connections...\n");
 
+
     while(1) {
         fd_set reads;
         reads = master;
@@ -65,8 +66,6 @@ int main() {
                                           (struct sockaddr *)&client_address, &client_len);
             //print the message
 
-            puts(read);
-
             if (bytes_received < 1) {
                 fprintf(stderr, "connection closed. (%d)\n",
                         GETSOCKETERRNO());
@@ -75,7 +74,7 @@ int main() {
                 const char *ack = " Acknowledged \n";
                 int tBytes = sendto(socket_listen, ack, strlen(ack), 0,
                                     (struct sockaddr *) &client_address, client_len);
-                printf("Bytes &n sent\n Acknowleged \n", tBytes);
+                printf("Bytes %d sent\n", tBytes);
 
             }
         } //if FD_ISSET
