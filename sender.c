@@ -9,6 +9,10 @@ int main(int args, char *argv[]) {
     }
 #endif
 
+    struct timeval timeout;
+    timeout.tv_sec = 0;
+    timeout.tv_usec = 100000;
+
     if (args < 3) {
         fprintf(stderr, "usage: tcp_client hostname port\n");
         return 1;
@@ -48,24 +52,23 @@ int main(int args, char *argv[]) {
 
     //concatnates message and argv[2] into new message
     const char *newMessage = strcat(argv[2],message);
-    int bytes_sent = sendto(socket_peer,newMessage, strlen(newMessage),0,peer_address->ai_addr, peer_address->ai_addrlen);
-    printf("Sent %d bytes.\n", bytes_sent);
-
-    //receive checks for bytes if empty it continues
     char read [1024];
-    int bytes_check = 1 ;
-    do {
+    int bytes_check = 1;
+
+    while(bytes_check == 1){
+    //start of loop do
+        int bytes_sent = sendto(socket_peer,newMessage, strlen(newMessage),0,peer_address->ai_addr, peer_address->ai_addrlen);
+        printf("Sent %d bytes.\n", bytes_sent);
         int bytes_received = recvfrom(socket_peer,
                                       read, 1024,
                                       0,
                                       (struct sockaddr *) &peer_address, &peer_address->ai_addrlen);
-        printf("%d bytes received. \n Message received:\n",bytes_received,read);
+        printf("%d bytes received. \n Message received: %s\n",bytes_received,read);
         bytes_check = bytes_received;
-        Sleep(5);
-    } while(bytes_check > 0);
+        Sleep(8000);
+    }
 
-
-
+    // check for received message if not return to line 44  while ( message not received) after 30 seconds.
     freeaddrinfo(peer_address);
     CLOSESOCKET(socket_peer);
 

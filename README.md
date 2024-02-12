@@ -1,7 +1,8 @@
-# Hwang-sProgrammingChallenge
+# Hwang's Programming Challenge
 
-//** Chapter 4
+Chapter  
 Programming challenge.
+__________________________________________________________________________________________
 Simulate the sending of a message through an unreliable network but with a guarantee that the
 message is received.
 How do you guarantee that your message is received? The analogy is like sending a register mail. When
