@@ -41,72 +41,56 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/kssms/CLionProjects/ProgChallenge/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target ProgChallenge
+# Object build statements for EXECUTABLE target main.cpp
 
 
 #############################################
-# Order-only phony target for ProgChallenge
+# Order-only phony target for main.cpp
 
-build cmake_object_order_depends_target_ProgChallenge: phony || CMakeFiles/ProgChallenge.dir
+build cmake_object_order_depends_target_main.cpp: phony || CMakeFiles/main.cpp.dir
 
-build CMakeFiles/ProgChallenge.dir/main.cpp.obj: CXX_COMPILER__ProgChallenge_unscanned_Debug C$:/Users/kssms/CLionProjects/ProgChallenge/main.cpp || cmake_object_order_depends_target_ProgChallenge
-  DEP_FILE = CMakeFiles\ProgChallenge.dir\main.cpp.obj.d
+build CMakeFiles/main.cpp.dir/sender.c.obj: C_COMPILER__main.2ecpp_unscanned_Debug C$:/Users/kssms/CLionProjects/ProgChallenge/sender.c || cmake_object_order_depends_target_main.cpp
+  DEP_FILE = CMakeFiles\main.cpp.dir\sender.c.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ProgChallenge.dir
-  OBJECT_FILE_DIR = CMakeFiles\ProgChallenge.dir
-  TARGET_COMPILE_PDB = CMakeFiles\ProgChallenge.dir\
-  TARGET_PDB = ProgChallenge.pdb
+  OBJECT_DIR = CMakeFiles\main.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.cpp.dir
+  TARGET_COMPILE_PDB = CMakeFiles\main.cpp.dir\
+  TARGET_PDB = main.cpp.pdb
 
-build CMakeFiles/ProgChallenge.dir/sender.c.obj: C_COMPILER__ProgChallenge_unscanned_Debug C$:/Users/kssms/CLionProjects/ProgChallenge/sender.c || cmake_object_order_depends_target_ProgChallenge
-  DEP_FILE = CMakeFiles\ProgChallenge.dir\sender.c.obj.d
+build CMakeFiles/main.cpp.dir/receiver.c.obj: C_COMPILER__main.2ecpp_unscanned_Debug C$:/Users/kssms/CLionProjects/ProgChallenge/receiver.c || cmake_object_order_depends_target_main.cpp
+  DEP_FILE = CMakeFiles\main.cpp.dir\receiver.c.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ProgChallenge.dir
-  OBJECT_FILE_DIR = CMakeFiles\ProgChallenge.dir
-  TARGET_COMPILE_PDB = CMakeFiles\ProgChallenge.dir\
-  TARGET_PDB = ProgChallenge.pdb
+  OBJECT_DIR = CMakeFiles\main.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.cpp.dir
+  TARGET_COMPILE_PDB = CMakeFiles\main.cpp.dir\
+  TARGET_PDB = main.cpp.pdb
 
-build CMakeFiles/ProgChallenge.dir/middle.c.obj: C_COMPILER__ProgChallenge_unscanned_Debug C$:/Users/kssms/CLionProjects/ProgChallenge/middle.c || cmake_object_order_depends_target_ProgChallenge
-  DEP_FILE = CMakeFiles\ProgChallenge.dir\middle.c.obj.d
+build CMakeFiles/main.cpp.dir/middleman.c.obj: C_COMPILER__main.2ecpp_unscanned_Debug C$:/Users/kssms/CLionProjects/ProgChallenge/middleman.c || cmake_object_order_depends_target_main.cpp
+  DEP_FILE = CMakeFiles\main.cpp.dir\middleman.c.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ProgChallenge.dir
-  OBJECT_FILE_DIR = CMakeFiles\ProgChallenge.dir
-  TARGET_COMPILE_PDB = CMakeFiles\ProgChallenge.dir\
-  TARGET_PDB = ProgChallenge.pdb
-
-build CMakeFiles/ProgChallenge.dir/receiver.c.obj: C_COMPILER__ProgChallenge_unscanned_Debug C$:/Users/kssms/CLionProjects/ProgChallenge/receiver.c || cmake_object_order_depends_target_ProgChallenge
-  DEP_FILE = CMakeFiles\ProgChallenge.dir\receiver.c.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ProgChallenge.dir
-  OBJECT_FILE_DIR = CMakeFiles\ProgChallenge.dir
-  TARGET_COMPILE_PDB = CMakeFiles\ProgChallenge.dir\
-  TARGET_PDB = ProgChallenge.pdb
-
-build CMakeFiles/ProgChallenge.dir/middleman.c.obj: C_COMPILER__ProgChallenge_unscanned_Debug C$:/Users/kssms/CLionProjects/ProgChallenge/middleman.c || cmake_object_order_depends_target_ProgChallenge
-  DEP_FILE = CMakeFiles\ProgChallenge.dir\middleman.c.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ProgChallenge.dir
-  OBJECT_FILE_DIR = CMakeFiles\ProgChallenge.dir
-  TARGET_COMPILE_PDB = CMakeFiles\ProgChallenge.dir\
-  TARGET_PDB = ProgChallenge.pdb
+  OBJECT_DIR = CMakeFiles\main.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.cpp.dir
+  TARGET_COMPILE_PDB = CMakeFiles\main.cpp.dir\
+  TARGET_PDB = main.cpp.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target ProgChallenge
+# Link build statements for EXECUTABLE target main.cpp
 
 
 #############################################
-# Link the executable ProgChallenge.exe
+# Link the executable main.cpp.exe
 
-build ProgChallenge.exe: CXX_EXECUTABLE_LINKER__ProgChallenge_Debug CMakeFiles/ProgChallenge.dir/main.cpp.obj CMakeFiles/ProgChallenge.dir/sender.c.obj CMakeFiles/ProgChallenge.dir/middle.c.obj CMakeFiles/ProgChallenge.dir/receiver.c.obj CMakeFiles/ProgChallenge.dir/middleman.c.obj
+build main.cpp.exe: C_EXECUTABLE_LINKER__main.2ecpp_Debug CMakeFiles/main.cpp.dir/sender.c.obj CMakeFiles/main.cpp.dir/receiver.c.obj CMakeFiles/main.cpp.dir/middleman.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lws2_32  -lwsock32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\ProgChallenge.dir
+  OBJECT_DIR = CMakeFiles\main.cpp.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\ProgChallenge.dir\
-  TARGET_FILE = ProgChallenge.exe
-  TARGET_IMPLIB = libProgChallenge.dll.a
-  TARGET_PDB = ProgChallenge.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\main.cpp.dir\
+  TARGET_FILE = main.cpp.exe
+  TARGET_IMPLIB = libmain.cpp.dll.a
+  TARGET_PDB = main.cpp.pdb
 
 
 #############################################
@@ -134,7 +118,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build ProgChallenge: phony ProgChallenge.exe
+build main.cpp: phony main.cpp.exe
 
 # =============================================================================
 # Folder targets.
@@ -144,7 +128,7 @@ build ProgChallenge: phony ProgChallenge.exe
 #############################################
 # Folder: C:/Users/kssms/CLionProjects/ProgChallenge/cmake-build-debug
 
-build all: phony ProgChallenge.exe
+build all: phony main.cpp.exe
 
 # =============================================================================
 # Built-in targets

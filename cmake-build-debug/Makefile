@@ -47,33 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-<<<<<<< HEAD
 CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2023.3.3\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
 RM = "C:\Program Files\JetBrains\CLion 2023.3.3\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
-=======
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe"
-
-# The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
->>>>>>> e02eb357fab5b2fdedd289d6a2ce93f875f70b6d
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug
-=======
-CMAKE_SOURCE_DIR = C:\Users\amado\CLionProjects\Hwang-sProgrammingChallenge
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\amado\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug
->>>>>>> e02eb357fab5b2fdedd289d6a2ce93f875f70b6d
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,11 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\amado\CLionProjects\Hwang-sProgrammingChallenge\cmak
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-<<<<<<< HEAD
 	"C:\Program Files\JetBrains\CLion 2023.3.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-=======
-	"C:\Program Files\JetBrains\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
->>>>>>> e02eb357fab5b2fdedd289d6a2ce93f875f70b6d
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -95,11 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-<<<<<<< HEAD
 	"C:\Program Files\JetBrains\CLion 2023.3.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-=======
-	"C:\Program Files\JetBrains\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
->>>>>>> e02eb357fab5b2fdedd289d6a2ce93f875f70b6d
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -108,15 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\CMakeFiles C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\CMakeFiles 0
-=======
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\amado\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\CMakeFiles C:\Users\amado\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\amado\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\CMakeFiles 0
->>>>>>> e02eb357fab5b2fdedd289d6a2ce93f875f70b6d
 .PHONY : all
 
 # The main clean target
@@ -144,72 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ProgChallenge
+# Target rules for targets named main.cpp
 
 # Build rule for target.
-ProgChallenge: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ProgChallenge
-.PHONY : ProgChallenge
+main.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main.cpp
+.PHONY : main.cpp
 
 # fast build rule for target.
-ProgChallenge/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/build
-.PHONY : ProgChallenge/fast
-
-main.obj: main.cpp.obj
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-middle.obj: middle.c.obj
-.PHONY : middle.obj
-
-# target to build an object file
-middle.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middle.c.obj
-.PHONY : middle.c.obj
-
-middle.i: middle.c.i
-.PHONY : middle.i
-
-# target to preprocess a source file
-middle.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middle.c.i
-.PHONY : middle.c.i
-
-middle.s: middle.c.s
-.PHONY : middle.s
-
-# target to generate assembly for a file
-middle.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middle.c.s
-.PHONY : middle.c.s
+main.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/build
+.PHONY : main.cpp/fast
 
 middleman.obj: middleman.c.obj
 .PHONY : middleman.obj
 
 # target to build an object file
 middleman.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middleman.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/middleman.c.obj
 .PHONY : middleman.c.obj
 
 middleman.i: middleman.c.i
@@ -217,7 +141,7 @@ middleman.i: middleman.c.i
 
 # target to preprocess a source file
 middleman.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middleman.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/middleman.c.i
 .PHONY : middleman.c.i
 
 middleman.s: middleman.c.s
@@ -225,7 +149,7 @@ middleman.s: middleman.c.s
 
 # target to generate assembly for a file
 middleman.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middleman.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/middleman.c.s
 .PHONY : middleman.c.s
 
 receiver.obj: receiver.c.obj
@@ -233,7 +157,7 @@ receiver.obj: receiver.c.obj
 
 # target to build an object file
 receiver.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/receiver.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/receiver.c.obj
 .PHONY : receiver.c.obj
 
 receiver.i: receiver.c.i
@@ -241,7 +165,7 @@ receiver.i: receiver.c.i
 
 # target to preprocess a source file
 receiver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/receiver.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/receiver.c.i
 .PHONY : receiver.c.i
 
 receiver.s: receiver.c.s
@@ -249,7 +173,7 @@ receiver.s: receiver.c.s
 
 # target to generate assembly for a file
 receiver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/receiver.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/receiver.c.s
 .PHONY : receiver.c.s
 
 sender.obj: sender.c.obj
@@ -257,7 +181,7 @@ sender.obj: sender.c.obj
 
 # target to build an object file
 sender.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/sender.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/sender.c.obj
 .PHONY : sender.c.obj
 
 sender.i: sender.c.i
@@ -265,7 +189,7 @@ sender.i: sender.c.i
 
 # target to preprocess a source file
 sender.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/sender.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/sender.c.i
 .PHONY : sender.c.i
 
 sender.s: sender.c.s
@@ -273,7 +197,7 @@ sender.s: sender.c.s
 
 # target to generate assembly for a file
 sender.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/sender.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/sender.c.s
 .PHONY : sender.c.s
 
 # Help Target
@@ -284,13 +208,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... ProgChallenge
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... middle.obj
-	@echo ... middle.i
-	@echo ... middle.s
+	@echo ... main.cpp
 	@echo ... middleman.obj
 	@echo ... middleman.i
 	@echo ... middleman.s

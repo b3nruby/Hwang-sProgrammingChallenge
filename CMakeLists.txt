@@ -4,9 +4,9 @@ project(ProgChallenge)
 set(CMAKE_CXX_STANDARD 17)
 link_libraries(ws2_32 wsock32)
 
-add_executable(ProgChallenge main.cpp
+add_executable(
+        main.cpp
         sender.c
-        middle.c
         receiver.c
         winHead.h
         middleman.c
