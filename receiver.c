@@ -65,6 +65,8 @@ int main() {
                                           (struct sockaddr *)&client_address, &client_len);
             //print the message
 
+            puts(read);
+
             if (bytes_received < 1) {
                 fprintf(stderr, "connection closed. (%d)\n",
                         GETSOCKETERRNO());

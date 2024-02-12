@@ -20,6 +20,6 @@ CMake Deprecation Warning:
 -- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 2023.3.2/bin/mingw/bin/g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (5.2s)
+-- Configuring done (5.5s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge/cmake-build-debug

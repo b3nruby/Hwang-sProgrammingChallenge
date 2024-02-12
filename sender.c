@@ -56,6 +56,7 @@ int main(int args, char *argv[]) {
     printf("Sent %d bytes.\n", bytes_sent);
 
     //receive checks for bytes if empty it continues
+    /*
     char read [1024];
     int bytes_check = 1 ;
     do {
@@ -67,7 +68,18 @@ int main(int args, char *argv[]) {
         bytes_check = bytes_received;
         Sleep(5);
     } while(bytes_check > 0);
+    */
 
+    char read [1024];
+    int bytes_check = 1;
+    int bytes_received = recvfrom(socket_peer,
+                                  read, 1024,
+                                  0,
+                                  (struct sockaddr *) &peer_address, &peer_address->ai_addrlen);
+    printf("%d bytes received. \n Message received:\n",bytes_received,read);
+    puts(read);
+    bytes_check = bytes_received;
+    Sleep(5);
 
     freeaddrinfo(peer_address);
     CLOSESOCKET(socket_peer);
