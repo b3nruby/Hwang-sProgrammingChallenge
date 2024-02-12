@@ -1,13 +1,15 @@
 #include "winHead.h"
 
 int main(int args, char *argv[]) {
-#if defined(_WIN32)
+
+    char read [1024];
+    int bytes_check =0 ;
+
     WSADATA d;
     if (WSAStartup(MAKEWORD(2, 2), &d)) {
         fprintf(stderr, "Failed to initialize.\n");
         return 1;
     }
-#endif
 
     struct timeval timeout;
     timeout.tv_sec = 0;
@@ -52,12 +54,12 @@ int main(int args, char *argv[]) {
 
     //concatnates message and argv[2] into new message
     const char *newMessage = strcat(argv[2],message);
-    char read [1024];
-    int bytes_check = 1;
+    //receive checks for bytes if empty it continues
 
-    while(bytes_check == 1){
-    //start of loop do
-        int bytes_sent = sendto(socket_peer,newMessage, strlen(newMessage),0,peer_address->ai_addr, peer_address->ai_addrlen);
+    while(bytes_check == 0) {
+        //start of loop do
+        int bytes_sent = sendto(socket_peer, newMessage, strlen(newMessage), 0, peer_address->ai_addr,
+                                peer_address->ai_addrlen);
         printf("Sent %d bytes.\n", bytes_sent);
         int bytes_received = recvfrom(socket_peer,
                                       read, 1024,
@@ -68,12 +70,8 @@ int main(int args, char *argv[]) {
         Sleep(8000);
     }
 
-    // check for received message if not return to line 44  while ( message not received) after 30 seconds.
-    freeaddrinfo(peer_address);
     CLOSESOCKET(socket_peer);
-
     WSACleanup();
-
     printf("Finished.\n");
     return 0;
 }

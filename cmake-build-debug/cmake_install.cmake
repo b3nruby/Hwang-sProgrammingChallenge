@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Install script for directory: C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge
-=======
-# Install script for directory: C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge
->>>>>>> e02eb357fab5b2fdedd289d6a2ce93f875f70b6d
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2023.3.3/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/MinGW/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -49,9 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-<<<<<<< HEAD
 file(WRITE "C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
-=======
-file(WRITE "C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
->>>>>>> e02eb357fab5b2fdedd289d6a2ce93f875f70b6d
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

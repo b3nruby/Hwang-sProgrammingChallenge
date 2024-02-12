@@ -32,8 +32,8 @@ char* sendMessage(char* ipnum, char*message){
     }
     //forward message to third computer
     int tBytes = sendto(socket_peer,message, strlen(message), 0,peer_address->ai_addr, peer_address->ai_addrlen);
-    printf("Bytes &n sent\n", tBytes);
-    printf("Message sent to computer 3: &s\n", message);
+    printf("Bytes %d sent\n", tBytes);
+    printf("Message sent to computer 3: %s\n", message);
 
     //Listen for message from the third computer
     int bytes_received = recvfrom(socket_peer,
@@ -50,103 +50,104 @@ char* sendMessage(char* ipnum, char*message){
 
 
 int main() {
-    char read[1024];
-    char tmpBuff[1024];
-    char message[1024];
-    char ip[16];
-    char* message2;
     int num = 1;
-
-    //basic start for socket set up
-    WSADATA d;
-    if (WSAStartup(MAKEWORD(2, 2), &d)) {
-        fprintf(stderr, "Failed to initialize.\n");
-        return 1;
-    }
-    printf("Configuring local address...\n");
-
-    struct addrinfo hints;
-    memset(&hints, 0, sizeof(hints));
-    hints.ai_family = AF_INET;
-    hints.ai_socktype = SOCK_DGRAM;
-    hints.ai_flags = AI_PASSIVE;
-    struct addrinfo *bind_address;
-    getaddrinfo(0, "8080", &hints, &bind_address);
-
-    printf("Creating socket...\n");
-    SOCKET socket_listen;
-    socket_listen = socket(bind_address->ai_family,
-                           bind_address->ai_socktype, bind_address->ai_protocol);
-    if (!ISVALIDSOCKET(socket_listen)) {
-        fprintf(stderr, "socket() failed. (%d)\n", GETSOCKETERRNO());
-        return 1;
-    }
-    printf("Binding socket to local address...\n");
-    if (bind(socket_listen, bind_address->ai_addr, bind_address->ai_addrlen)) {
-        fprintf(stderr, "bind() failed. (%d)\n", GETSOCKETERRNO());
-        return 1;
-    }
-    freeaddrinfo(bind_address);
-
-
-    struct sockaddr_storage client_address;
-    socklen_t client_len = sizeof(client_address);
-
-    //start of receiving from computer 1
     while (num == 1) {
-        int bytes_received = recvfrom(socket_listen,
-                                      read, 1024,
-                                      0,
-                                      (struct sockaddr *) &client_address, &client_len);
+        char read[1024];
+        char tmpBuff[1024];
+        char message[1024];
+        char ip[16];
+        char* message2;
 
-        //split read into Ip and Message
-        strcpy(tmpBuff, read);
-
-        char *ptr = strtok(tmpBuff, " ");
-        if (ptr != NULL) {
-            strcpy(ip, ptr);
-            ptr = strtok(NULL, "");
-            if (ptr != NULL) {
-                strcpy(message, ptr);
-            } else {
-                printf("No Message found.\n");
-            }
-        } else {
-            printf("No IP address found\n");
+        //basic start for socket set up
+        WSADATA d;
+        if (WSAStartup(MAKEWORD(2, 2), &d)) {
+            fprintf(stderr, "Failed to initialize.\n");
+            return 1;
         }
+        printf("Configuring local address...\n");
 
-        printf("\nReceived (%d bytes)\n", bytes_received);
-        printf("Message Received: %s\n", message);
+        struct addrinfo hints;
+        memset(&hints, 0, sizeof(hints));
+        hints.ai_family = AF_INET;
+        hints.ai_socktype = SOCK_DGRAM;
+        hints.ai_flags = AI_PASSIVE;
+        struct addrinfo *bind_address;
+        getaddrinfo(0, "8080", &hints, &bind_address);
 
-        // check to see if user wants to drop message
-        char userInput[10];
-        while (1) {
-            printf("Do you want to drop the message? (yes/no): ");
+        //socket creation
+        printf("Creating socket...\n");
+        SOCKET socket_listen;
+        socket_listen = socket(bind_address->ai_family,
+                               bind_address->ai_socktype, bind_address->ai_protocol);
+        if (!ISVALIDSOCKET(socket_listen)) {
+            fprintf(stderr, "socket() failed. (%d)\n", GETSOCKETERRNO());
+            return 1;
+        }
+        printf("Binding socket to local address...\n");
+        if (bind(socket_listen, bind_address->ai_addr, bind_address->ai_addrlen)) {
+            fprintf(stderr, "bind() failed. (%d)\n", GETSOCKETERRNO());
+            return 1;
+        }
+        freeaddrinfo(bind_address);
+
+        //start of receiving from computer 1
+            struct sockaddr_storage client_address;
+            socklen_t client_len = sizeof(client_address);
+                int bytes_received = recvfrom(socket_listen,
+                                              read, 1024,
+                                              0,
+                                              (struct sockaddr *) &client_address, &client_len);
+                //split read into Ip and Message
+                strcpy(tmpBuff, read);
+                char *ptr = strtok(tmpBuff, " ");
+                if (ptr != NULL) {
+                    strcpy(ip, ptr);
+                    ptr = strtok(NULL, "");
+                    if (ptr != NULL) {
+                        strcpy(message, ptr);
+                    } else {
+                        printf("No Message found.\n");
+                    }
+                } else {
+                    printf("No IP address found\n");
+                }
+                //print out message and the number of bytes
+                printf("Received %d bytes from computer 1\n", bytes_received);
+                printf("Message Received: %s\n", message);
+
+                // check to see if user wants to drop message
+                char userInput[10];
+                while (1) {
+                    printf("Do you want to drop the message? (yes/no): ");
+                    scanf("%s", userInput);
+                    if (strcmp(userInput, "yes") == 0) {
+                        printf("Message dropped. Exiting function.\n");
+                        break;
+                    } else if (strcmp(userInput, "no") == 0) {
+                        printf("Continuing with processing...\n");
+                        //function that will send and receive to computer 3 and return a message from computer 3
+                        message2 = sendMessage(ip, message);
+                        //function to send back to original sender
+                        int bytes_sent = sendto(socket_listen, message2, strlen(message2), 0,
+                                                (struct sockaddr *) &client_address, client_len);
+                        printf("Sent %d bytes to computer 1.\n", bytes_sent);
+                        printf( "Message sent to computer 1: %s\n", message2);
+                        break;
+                    } else {
+                        printf("Invalid input. Please enter 'yes' or 'no'.\n");
+                    }
+                }
+            CLOSESOCKET(socket_listen);
+            WSACleanup();
+            //check if to stay open or closed
+            printf("Do you wanna stay open? (yes/no): ");
             scanf("%s", userInput);
-            if (strcmp(userInput, "yes") == 0) {
-                printf("Message dropped. Exiting function.\n");
+            if(strcmp(userInput, "no") == 0){
                 break;
-            } else if (strcmp(userInput, "no") == 0) {
-                printf("Continuing with processing...\n");
-                //function that will send and receive to computer 3 and return a message from computer 3
-                message2 = sendMessage(ip, message);
-                num = 0;
-                break;
-            } else {
-                printf("Invalid input. Please enter 'yes' or 'no'.\n");
             }
-        }
-        //function to send back to original sender
-        //int bytes_sent = sendto(socket_listen,message2, strlen(message2),0, bind_address->ai_addr, bind_address->ai_addrlen);
-        int bytes_sent = sendto(socket_listen, message2, strlen(message2), 0,
-                                (struct sockaddr *) &client_address, client_len);
-        printf("Sent %d bytes.\n", bytes_sent);
-        printf( "Message sent: %s\n", message2);
-
+        CLOSESOCKET(socket_listen);
+        WSACleanup();
     }
-
-    CLOSESOCKET(socket_listen);
-    WSACleanup();
 
     printf("Finished.\n");
     return 0;

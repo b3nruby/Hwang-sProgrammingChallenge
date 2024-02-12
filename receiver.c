@@ -68,22 +68,21 @@ int main() {
             if (bytes_received < 1) {
                 fprintf(stderr, "connection closed. (%d)\n",
                         GETSOCKETERRNO());
-                return 1;
+                break;
             }else {
                 const char *ack = " Acknowledged \n";
                 int tBytes = sendto(socket_listen, ack, strlen(ack), 0,
                                     (struct sockaddr *) &client_address, client_len);
-                printf("Bytes &n sent\n", tBytes);
+                printf("Message sent: %s \n", ack);
+                printf("Bytes %d sent\n", tBytes);
+
             }
         } //if FD_ISSET
     } //while(1)
 
-
-
     printf("Closing listening socket...\n");
     CLOSESOCKET(socket_listen);
     WSACleanup();
-
     printf("Finished.\n");
 
     return 0;

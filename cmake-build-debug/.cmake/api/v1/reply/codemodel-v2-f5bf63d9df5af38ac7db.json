@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "ProgChallenge::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ProgChallenge-Debug-304e09402a5f99ec35ab.json",
-					"name" : "ProgChallenge",
+					"id" : "main.cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main.cpp-Debug-e53dacb7707f91851140.json",
+					"name" : "main.cpp",
 					"projectIndex" : 0
 				}
 			]
@@ -49,13 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-733313defe72e19053de.json
 		"build" : "C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge/cmake-build-debug",
 		"source" : "C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge"
-========
-		"build" : "C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge/cmake-build-debug",
-		"source" : "C:/Users/amado/CLionProjects/Hwang-sProgrammingChallenge"
->>>>>>>> e02eb357fab5b2fdedd289d6a2ce93f875f70b6d:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2c322a759f303b7f9161.json
 	},
 	"version" : 
 	{
