@@ -72,71 +72,71 @@ CMakeFiles/ProgChallenge.dir/main.cpp.obj: CMakeFiles/ProgChallenge.dir/flags.ma
 CMakeFiles/ProgChallenge.dir/main.cpp.obj: C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge/main.cpp
 CMakeFiles/ProgChallenge.dir/main.cpp.obj: CMakeFiles/ProgChallenge.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProgChallenge.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProgChallenge.dir/main.cpp.obj -MF CMakeFiles\ProgChallenge.dir\main.cpp.obj.d -o CMakeFiles\ProgChallenge.dir\main.cpp.obj -c C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\main.cpp
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProgChallenge.dir/main.cpp.obj -MF CMakeFiles\ProgChallenge.dir\main.cpp.obj.d -o CMakeFiles\ProgChallenge.dir\main.cpp.obj -c C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\main.cpp
 
 CMakeFiles/ProgChallenge.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProgChallenge.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\main.cpp > CMakeFiles\ProgChallenge.dir\main.cpp.i
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\main.cpp > CMakeFiles\ProgChallenge.dir\main.cpp.i
 
 CMakeFiles/ProgChallenge.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProgChallenge.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\main.cpp -o CMakeFiles\ProgChallenge.dir\main.cpp.s
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\main.cpp -o CMakeFiles\ProgChallenge.dir\main.cpp.s
 
 CMakeFiles/ProgChallenge.dir/sender.c.obj: CMakeFiles/ProgChallenge.dir/flags.make
 CMakeFiles/ProgChallenge.dir/sender.c.obj: C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge/sender.c
 CMakeFiles/ProgChallenge.dir/sender.c.obj: CMakeFiles/ProgChallenge.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ProgChallenge.dir/sender.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProgChallenge.dir/sender.c.obj -MF CMakeFiles\ProgChallenge.dir\sender.c.obj.d -o CMakeFiles\ProgChallenge.dir\sender.c.obj -c C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\sender.c
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProgChallenge.dir/sender.c.obj -MF CMakeFiles\ProgChallenge.dir\sender.c.obj.d -o CMakeFiles\ProgChallenge.dir\sender.c.obj -c C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\sender.c
 
 CMakeFiles/ProgChallenge.dir/sender.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ProgChallenge.dir/sender.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\sender.c > CMakeFiles\ProgChallenge.dir\sender.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\sender.c > CMakeFiles\ProgChallenge.dir\sender.c.i
 
 CMakeFiles/ProgChallenge.dir/sender.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ProgChallenge.dir/sender.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\sender.c -o CMakeFiles\ProgChallenge.dir\sender.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\sender.c -o CMakeFiles\ProgChallenge.dir\sender.c.s
 
 CMakeFiles/ProgChallenge.dir/middle.c.obj: CMakeFiles/ProgChallenge.dir/flags.make
 CMakeFiles/ProgChallenge.dir/middle.c.obj: C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge/middle.c
 CMakeFiles/ProgChallenge.dir/middle.c.obj: CMakeFiles/ProgChallenge.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ProgChallenge.dir/middle.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProgChallenge.dir/middle.c.obj -MF CMakeFiles\ProgChallenge.dir\middle.c.obj.d -o CMakeFiles\ProgChallenge.dir\middle.c.obj -c C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middle.c
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProgChallenge.dir/middle.c.obj -MF CMakeFiles\ProgChallenge.dir\middle.c.obj.d -o CMakeFiles\ProgChallenge.dir\middle.c.obj -c C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middle.c
 
 CMakeFiles/ProgChallenge.dir/middle.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ProgChallenge.dir/middle.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middle.c > CMakeFiles\ProgChallenge.dir\middle.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middle.c > CMakeFiles\ProgChallenge.dir\middle.c.i
 
 CMakeFiles/ProgChallenge.dir/middle.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ProgChallenge.dir/middle.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middle.c -o CMakeFiles\ProgChallenge.dir\middle.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middle.c -o CMakeFiles\ProgChallenge.dir\middle.c.s
 
 CMakeFiles/ProgChallenge.dir/receiver.c.obj: CMakeFiles/ProgChallenge.dir/flags.make
 CMakeFiles/ProgChallenge.dir/receiver.c.obj: C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge/receiver.c
 CMakeFiles/ProgChallenge.dir/receiver.c.obj: CMakeFiles/ProgChallenge.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ProgChallenge.dir/receiver.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProgChallenge.dir/receiver.c.obj -MF CMakeFiles\ProgChallenge.dir\receiver.c.obj.d -o CMakeFiles\ProgChallenge.dir\receiver.c.obj -c C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\receiver.c
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProgChallenge.dir/receiver.c.obj -MF CMakeFiles\ProgChallenge.dir\receiver.c.obj.d -o CMakeFiles\ProgChallenge.dir\receiver.c.obj -c C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\receiver.c
 
 CMakeFiles/ProgChallenge.dir/receiver.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ProgChallenge.dir/receiver.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\receiver.c > CMakeFiles\ProgChallenge.dir\receiver.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\receiver.c > CMakeFiles\ProgChallenge.dir\receiver.c.i
 
 CMakeFiles/ProgChallenge.dir/receiver.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ProgChallenge.dir/receiver.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\receiver.c -o CMakeFiles\ProgChallenge.dir\receiver.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\receiver.c -o CMakeFiles\ProgChallenge.dir\receiver.c.s
 
 CMakeFiles/ProgChallenge.dir/middleman.c.obj: CMakeFiles/ProgChallenge.dir/flags.make
 CMakeFiles/ProgChallenge.dir/middleman.c.obj: C:/Users/kssms/CLionProjects/Hwang-sProgrammingChallenge/middleman.c
 CMakeFiles/ProgChallenge.dir/middleman.c.obj: CMakeFiles/ProgChallenge.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ProgChallenge.dir/middleman.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProgChallenge.dir/middleman.c.obj -MF CMakeFiles\ProgChallenge.dir\middleman.c.obj.d -o CMakeFiles\ProgChallenge.dir\middleman.c.obj -c C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middleman.c
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProgChallenge.dir/middleman.c.obj -MF CMakeFiles\ProgChallenge.dir\middleman.c.obj.d -o CMakeFiles\ProgChallenge.dir\middleman.c.obj -c C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middleman.c
 
 CMakeFiles/ProgChallenge.dir/middleman.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ProgChallenge.dir/middleman.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middleman.c > CMakeFiles\ProgChallenge.dir\middleman.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middleman.c > CMakeFiles\ProgChallenge.dir\middleman.c.i
 
 CMakeFiles/ProgChallenge.dir/middleman.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ProgChallenge.dir/middleman.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middleman.c -o CMakeFiles\ProgChallenge.dir\middleman.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\kssms\CLionProjects\Hwang-sProgrammingChallenge\middleman.c -o CMakeFiles\ProgChallenge.dir\middleman.c.s
 
 # Object files for target ProgChallenge
 ProgChallenge_OBJECTS = \
