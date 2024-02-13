@@ -1,14 +1,11 @@
 #include "winHead.h"
 
 int main() {
-
-#if defined(_WIN32)
     WSADATA d;
     if (WSAStartup(MAKEWORD(2, 2), &d)) {
         fprintf(stderr, "Failed to initialize.\n");
         return 1;
     }
-#endif
 
 
     printf("Configuring local address...\n");
@@ -64,22 +61,18 @@ int main() {
             int bytes_received = recvfrom(socket_listen, read, 1024, 0,
                                           (struct sockaddr *)&client_address, &client_len);
             //print the message
-
             if (bytes_received < 1) {
                 fprintf(stderr, "connection closed. (%d)\n",
                         GETSOCKETERRNO());
-                return 1;
+                break;
             }else {
                 const char *ack = " Acknowledged \n";
                 int tBytes = sendto(socket_listen, ack, strlen(ack), 0,
                                     (struct sockaddr *) &client_address, client_len);
-                printf("Bytes &n sent\n Acknowleged \n", tBytes);
-
+                printf("Bytes %d sent\n Acknowleged \n", tBytes);
             }
         } //if FD_ISSET
     } //while(1)
-
-
 
     printf("Closing listening socket...\n");
     CLOSESOCKET(socket_listen);

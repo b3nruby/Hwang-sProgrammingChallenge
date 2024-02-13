@@ -116,72 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ProgChallenge
+# Target rules for targets named main.cpp
 
 # Build rule for target.
-ProgChallenge: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ProgChallenge
-.PHONY : ProgChallenge
+main.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main.cpp
+.PHONY : main.cpp
 
 # fast build rule for target.
-ProgChallenge/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/build
-.PHONY : ProgChallenge/fast
-
-main.obj: main.cpp.obj
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-middle.obj: middle.c.obj
-.PHONY : middle.obj
-
-# target to build an object file
-middle.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middle.c.obj
-.PHONY : middle.c.obj
-
-middle.i: middle.c.i
-.PHONY : middle.i
-
-# target to preprocess a source file
-middle.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middle.c.i
-.PHONY : middle.c.i
-
-middle.s: middle.c.s
-.PHONY : middle.s
-
-# target to generate assembly for a file
-middle.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middle.c.s
-.PHONY : middle.c.s
+main.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/build
+.PHONY : main.cpp/fast
 
 middleman.obj: middleman.c.obj
 .PHONY : middleman.obj
 
 # target to build an object file
 middleman.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middleman.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/middleman.c.obj
 .PHONY : middleman.c.obj
 
 middleman.i: middleman.c.i
@@ -189,7 +141,7 @@ middleman.i: middleman.c.i
 
 # target to preprocess a source file
 middleman.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middleman.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/middleman.c.i
 .PHONY : middleman.c.i
 
 middleman.s: middleman.c.s
@@ -197,7 +149,7 @@ middleman.s: middleman.c.s
 
 # target to generate assembly for a file
 middleman.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/middleman.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/middleman.c.s
 .PHONY : middleman.c.s
 
 receiver.obj: receiver.c.obj
@@ -205,7 +157,7 @@ receiver.obj: receiver.c.obj
 
 # target to build an object file
 receiver.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/receiver.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/receiver.c.obj
 .PHONY : receiver.c.obj
 
 receiver.i: receiver.c.i
@@ -213,7 +165,7 @@ receiver.i: receiver.c.i
 
 # target to preprocess a source file
 receiver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/receiver.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/receiver.c.i
 .PHONY : receiver.c.i
 
 receiver.s: receiver.c.s
@@ -221,7 +173,7 @@ receiver.s: receiver.c.s
 
 # target to generate assembly for a file
 receiver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/receiver.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/receiver.c.s
 .PHONY : receiver.c.s
 
 sender.obj: sender.c.obj
@@ -229,7 +181,7 @@ sender.obj: sender.c.obj
 
 # target to build an object file
 sender.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/sender.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/sender.c.obj
 .PHONY : sender.c.obj
 
 sender.i: sender.c.i
@@ -237,7 +189,7 @@ sender.i: sender.c.i
 
 # target to preprocess a source file
 sender.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/sender.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/sender.c.i
 .PHONY : sender.c.i
 
 sender.s: sender.c.s
@@ -245,7 +197,7 @@ sender.s: sender.c.s
 
 # target to generate assembly for a file
 sender.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProgChallenge.dir\build.make CMakeFiles/ProgChallenge.dir/sender.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.cpp.dir\build.make CMakeFiles/main.cpp.dir/sender.c.s
 .PHONY : sender.c.s
 
 # Help Target
@@ -256,13 +208,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... ProgChallenge
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... middle.obj
-	@echo ... middle.i
-	@echo ... middle.s
+	@echo ... main.cpp
 	@echo ... middleman.obj
 	@echo ... middleman.i
 	@echo ... middleman.s

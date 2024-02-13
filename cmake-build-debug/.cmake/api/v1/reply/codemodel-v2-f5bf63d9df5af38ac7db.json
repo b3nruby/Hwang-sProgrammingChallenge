@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "ProgChallenge::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ProgChallenge-Debug-7de4fc4fe01c25b05163.json",
-					"name" : "ProgChallenge",
+					"id" : "main.cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main.cpp-Debug-e53dacb7707f91851140.json",
+					"name" : "main.cpp",
 					"projectIndex" : 0
 				}
 			]
